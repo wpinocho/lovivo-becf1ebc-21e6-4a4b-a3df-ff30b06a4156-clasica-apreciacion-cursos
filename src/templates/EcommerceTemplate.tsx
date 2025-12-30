@@ -45,7 +45,7 @@ export const EcommerceTemplate = ({
   const { hasCollections, loading: loadingCollections } = useCollections()
 
   const header = (
-    <div className={`py-2 ${headerClassName}`}>
+    <div className={`py-4 ${headerClassName}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -53,27 +53,21 @@ export const EcommerceTemplate = ({
 
           {/* Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <nav className="flex space-x-6">
+            <nav className="flex space-x-8">
               {!loadingCollections && hasCollections && (
                 <ScrollLink 
                   to="/#collections" 
-                  className="text-foreground/70 hover:text-foreground transition-colors"
+                  className="text-foreground/80 hover:text-foreground transition-colors font-medium"
                 >
-                  Collections
+                  Colecciones
                 </ScrollLink>
               )}
               <ScrollLink 
                 to="/#products" 
-                className="text-foreground/70 hover:text-foreground transition-colors"
+                className="text-foreground/80 hover:text-foreground transition-colors font-medium"
               >
-                Products
+                Cursos
               </ScrollLink>
-              <Link 
-                to="/blog" 
-                className="text-foreground/70 hover:text-foreground transition-colors"
-              >
-                Blog
-              </Link>
             </nav>
           </div>
 
@@ -113,45 +107,55 @@ export const EcommerceTemplate = ({
   )
 
   const footer = (
-    <div className={`bg-black text-white py-12 ${footerClassName}`}>
+    <div className={`bg-primary text-primary-foreground py-16 ${footerClassName}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
           <div>
-            <BrandLogoLeft />
-            <p className="mt-4 text-white/70">
-              Your trusted online store
+            <div className="mb-4">
+              <h3 className="text-2xl font-bold">Apreciación Musical</h3>
+            </div>
+            <p className="text-primary-foreground/80 leading-relaxed">
+              Cursos en línea para descubrir y comprender la música clásica con rigor y cercanía
             </p>
           </div>
 
           {/* Links */}
           <div>
-            <h3 className="font-semibold mb-4 text-white">Links</h3>
-            <div className="space-y-2">
+            <h3 className="font-semibold mb-4 text-lg">Navegación</h3>
+            <div className="space-y-3">
               <Link 
                 to="/" 
-                className="block text-white/70 hover:text-white transition-colors"
+                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors"
               >
-                Home
+                Inicio
               </Link>
-              <Link 
-                to="/blog" 
-                className="block text-white/70 hover:text-white transition-colors"
+              <ScrollLink 
+                to="/#collections" 
+                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors"
               >
-                Blog
-              </Link>
+                Colecciones
+              </ScrollLink>
+              <ScrollLink 
+                to="/#products" 
+                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+              >
+                Cursos
+              </ScrollLink>
             </div>
           </div>
 
-          {/* Social Links */}
+          {/* Contact */}
           <div>
-            <h3 className="font-semibold mb-4 text-white">Follow Us</h3>
-            <SocialLinks />
+            <h3 className="font-semibold mb-4 text-lg">Contacto</h3>
+            <p className="text-primary-foreground/80 leading-relaxed">
+              Para consultas sobre los cursos, escríbenos y te responderemos a la brevedad.
+            </p>
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-white/20 text-center text-white/70">
-          <p>&copy; 2025 Your Store. All rights reserved.</p>
+        <div className="mt-12 pt-8 border-t border-primary-foreground/20 text-center text-primary-foreground/70">
+          <p>&copy; 2025 Apreciación Musical. Todos los derechos reservados.</p>
         </div>
       </div>
     </div>

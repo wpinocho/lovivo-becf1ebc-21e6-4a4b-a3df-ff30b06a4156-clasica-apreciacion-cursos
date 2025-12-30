@@ -35,24 +35,39 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
       showCart={true}
     >
       {/* Hero Section */}
-      <section className="bg-background py-12 border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl font-bold text-foreground mb-4">
-            Discover Our Products
+      <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url(/hero.jpg)',
+            filter: 'brightness(0.6)'
+          }}
+        />
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            Apreciación Musical
           </h1>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Find the best products at the best price. Guaranteed quality and fast shipping.
+          <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+            Cursos en línea para descubrir, comprender y disfrutar la música clásica
+          </p>
+          <p className="text-lg text-white/80 max-w-2xl mx-auto">
+            Un espacio de aprendizaje riguroso y accesible, pensado para melómanos curiosos y amantes de la cultura
           </p>
         </div>
       </section>
 
       {/* Collections Section */}
       {!loadingCollections && collections.length > 0 && (
-        <section id="collections" className="py-12 bg-muted/30">
+        <section id="collections" className="py-20 bg-muted/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold text-foreground mb-8">
-              Our Collections
-            </h2>
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-foreground mb-4">
+                Nuestras Colecciones
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Explora nuestros cursos organizados por compositor, periodo histórico o tema especial
+              </p>
+            </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {collections.map((collection) => (
@@ -68,24 +83,33 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
       )}
 
       {/* Products Section */}
-      <section id="products" className="py-12">
+      <section id="products" className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl font-bold text-foreground">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-foreground mb-4">
               {selectedCollectionId 
-                ? `Products from ${collections.find(c => c.id === selectedCollectionId)?.name || 'Collection'}` 
-                : 'Featured Products'
+                ? collections.find(c => c.id === selectedCollectionId)?.name || 'Cursos' 
+                : 'Cursos Destacados'
               }
             </h2>
+            {!selectedCollectionId && (
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Profundiza en la música clásica con cursos diseñados para aprender a escuchar mejor
+              </p>
+            )}
+          </div>
+          <div className="flex items-center justify-center mb-8">
             {selectedCollectionId && (
               <Button 
                 variant="outline" 
                 onClick={handleShowAllProducts}
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
               >
-                See All Products
+                Ver Todos los Cursos
               </Button>
             )}
           </div>
+
           
           {loading ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -100,9 +124,9 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               ))}
             </div>
           ) : (
-            <div className="text-center py-12">
-              <p className="text-muted-foreground">
-                No products available.
+            <div className="text-center py-16">
+              <p className="text-muted-foreground text-lg">
+                No hay cursos disponibles en este momento.
               </p>
             </div>
           )}

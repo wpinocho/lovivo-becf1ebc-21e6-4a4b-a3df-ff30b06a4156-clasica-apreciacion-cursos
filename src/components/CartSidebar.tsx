@@ -64,13 +64,13 @@ export const CartSidebar = ({ isOpen, onClose }: CartSidebarProps) => {
         <div className="flex flex-col h-full">
           <SheetHeader className="p-6 border-b">
             <SheetTitle className="flex items-center gap-2">
-              Shopping Cart
+              Mi Carrito
               <Link to="/cart" onClick={onClose} className="hover:opacity-70 transition-opacity">
                 <ExternalLink className="h-4 w-4" />
               </Link>
             </SheetTitle>
             <div id="cart-description" className="sr-only">
-              Review and modify the products in your shopping cart
+              Revisa y modifica los cursos en tu carrito
             </div>
           </SheetHeader>
 
@@ -78,13 +78,13 @@ export const CartSidebar = ({ isOpen, onClose }: CartSidebarProps) => {
             <div className="flex-1 flex items-center justify-center p-6">
               <div className="text-center">
                 <h3 className="text-lg font-medium text-foreground mb-2">
-                  Your cart is empty
+                  Tu carrito está vacío
                 </h3>
                 <p className="text-muted-foreground mb-4">
-                  Add some products to start your purchase
+                  Explora nuestros cursos y comienza tu aprendizaje
                 </p>
                 <Button onClick={onClose} variant="outline">
-                  Continue Shopping
+                  Ver Cursos
                 </Button>
               </div>
             </div>
@@ -174,7 +174,7 @@ export const CartSidebar = ({ isOpen, onClose }: CartSidebarProps) => {
                   onClick={handleCreateCheckout} 
                   disabled={isCreatingOrder}
                 >
-                  {isCreatingOrder ? 'Processing...' : 'Checkout'}
+                  {isCreatingOrder ? 'Procesando...' : 'Proceder al Pago'}
                 </Button>
               </div>
             </>
