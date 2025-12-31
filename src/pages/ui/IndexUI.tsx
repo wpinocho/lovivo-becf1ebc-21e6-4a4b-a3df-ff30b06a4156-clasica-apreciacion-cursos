@@ -35,25 +35,30 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
       showCart={true}
     >
       {/* Hero Section */}
-      <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/hero.jpg)'
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/70" />
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-background/80 backdrop-blur-sm rounded-lg p-8 md:p-12 shadow-2xl border border-border/20">
-            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Apreciación Musical
-            </h1>
-            <p className="text-xl md:text-2xl text-foreground/90 mb-8 leading-relaxed">
-              Cursos en línea para descubrir, comprender y disfrutar la música clásica
-            </p>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Un espacio de aprendizaje riguroso y accesible, pensado para melómanos curiosos y amantes de la cultura
-            </p>
+      <section className="py-20 md:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Texto */}
+            <div className="space-y-6">
+              <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
+                Apreciación Musical
+              </h1>
+              <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed">
+                Cursos en línea para descubrir, comprender y disfrutar la música clásica
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Un espacio de aprendizaje riguroso y accesible, pensado para melómanos curiosos y amantes de la cultura
+              </p>
+            </div>
+            
+            {/* Ilustración */}
+            <div className="flex justify-center lg:justify-end">
+              <img 
+                src="/hero-minimal.jpg" 
+                alt="Apreciación Musical" 
+                className="w-full max-w-md rounded-lg"
+              />
+            </div>
           </div>
         </div>
       </section>
