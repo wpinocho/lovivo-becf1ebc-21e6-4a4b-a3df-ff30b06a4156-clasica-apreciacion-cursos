@@ -39,20 +39,22 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(/hero.jpg)',
-            filter: 'brightness(0.6)'
+            backgroundImage: 'url(/hero.jpg)'
           }}
         />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/70" />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Apreciación Musical
-          </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-            Cursos en línea para descubrir, comprender y disfrutar la música clásica
-          </p>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto">
-            Un espacio de aprendizaje riguroso y accesible, pensado para melómanos curiosos y amantes de la cultura
-          </p>
+          <div className="bg-background/80 backdrop-blur-sm rounded-lg p-8 md:p-12 shadow-2xl border border-border/20">
+            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+              Apreciación Musical
+            </h1>
+            <p className="text-xl md:text-2xl text-foreground/90 mb-8 leading-relaxed">
+              Cursos en línea para descubrir, comprender y disfrutar la música clásica
+            </p>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Un espacio de aprendizaje riguroso y accesible, pensado para melómanos curiosos y amantes de la cultura
+            </p>
+          </div>
         </div>
       </section>
 
