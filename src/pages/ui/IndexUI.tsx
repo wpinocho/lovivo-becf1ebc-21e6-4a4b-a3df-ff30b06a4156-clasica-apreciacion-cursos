@@ -35,37 +35,28 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
       showCart={true}
     >
       {/* Hero Section */}
-      <section className="py-20 md:py-32 relative overflow-hidden">
-        {/* Fondo compartido con la ilustración */}
-        <div className="absolute inset-0 opacity-30">
-          <img 
-            src="/hero-minimal.jpg" 
-            alt="" 
-            className="w-full h-full object-cover object-center"
-          />
-        </div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="py-20 md:py-32 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Texto integrado con el fondo */}
+            {/* Texto poético */}
             <div className="space-y-6">
               <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
                 Apreciación Musical
               </h1>
               <p className="text-xl md:text-2xl text-foreground/90 leading-relaxed">
-                Cursos en línea para descubrir, comprender y disfrutar la música clásica
+                La música clásica guarda historias, ideas y emociones que vale la pena descubrir.
               </p>
               <p className="text-lg text-foreground/70 leading-relaxed">
-                Un espacio de aprendizaje riguroso y accesible, pensado para melómanos curiosos y amantes de la cultura
+                Mis cursos de apreciación musical te invitan a escuchar con atención, contexto y placer.
               </p>
             </div>
             
-            {/* Ilustración más visible en el lado derecho */}
+            {/* Ilustración integrada */}
             <div className="flex justify-center lg:justify-end">
               <img 
                 src="/hero-minimal.jpg" 
                 alt="Apreciación Musical" 
-                className="w-full max-w-md opacity-90"
+                className="w-full max-w-md"
               />
             </div>
           </div>
