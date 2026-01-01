@@ -35,7 +35,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
       showCart={true}
     >
       {/* Hero Section */}
-      <section className="py-20 md:py-32" style={{ backgroundColor: '#FAF9F6' }}>
+      <section className="py-20 md:py-32 bg-[#FAF9F6]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Texto poético */}
@@ -54,7 +54,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
             {/* Ilustración integrada */}
             <div className="flex justify-center lg:justify-end">
               <img 
-                src="/hero-minimal.jpg" 
+                src="/hero-piano.png" 
                 alt="Apreciación Musical" 
                 className="w-full max-w-md"
               />
