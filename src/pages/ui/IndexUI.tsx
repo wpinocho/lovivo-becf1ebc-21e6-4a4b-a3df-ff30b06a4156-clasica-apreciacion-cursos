@@ -54,8 +54,8 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
             {/* Ilustración integrada */}
             <div className="flex justify-center lg:justify-end">
               <img 
-                src="/hero-piano.png" 
-                alt="Apreciación Musical" 
+                src="/hero-piano-bird.png" 
+                alt="Piano de cola con pájaro cantando notas musicales" 
                 className="w-full max-w-md"
               />
             </div>
