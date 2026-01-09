@@ -35,12 +35,30 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
       showCart={true}
     >
       {/* Hero Section */}
-      <section className="w-full max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <img 
-          src="/hero-integrated.jpg" 
-          alt="Apreciación Musical - La música clásica guarda historias, ideas y emociones que vale la pena descubrir" 
-          className="w-full h-auto object-contain rounded-lg shadow-lg"
-        />
+      <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Imagen a la izquierda */}
+          <div className="flex justify-center lg:justify-start">
+            <img 
+              src="/hero-integrated.jpg" 
+              alt="Apreciación Musical" 
+              className="w-full max-w-md h-auto object-contain rounded-lg shadow-lg"
+            />
+          </div>
+          
+          {/* Texto a la derecha */}
+          <div className="space-y-6 text-center lg:text-left">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground">
+              Apreciación Musical
+            </h1>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              La música clásica guarda historias, ideas y emociones que vale la pena descubrir.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Mis cursos de apreciación musical te invitan a escuchar con atención, contexto y placer.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* Collections Section */}
