@@ -40,8 +40,8 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
           {/* Imagen a la izquierda */}
           <div className="flex justify-center lg:justify-start">
             <img 
-              src="/hero-integrated.jpg" 
-              alt="Apreciación Musical" 
+              src="/hero-clean.jpg" 
+              alt="Piano con elementos musicales" 
               className="w-full max-w-md h-auto object-contain rounded-lg shadow-lg"
             />
           </div>
