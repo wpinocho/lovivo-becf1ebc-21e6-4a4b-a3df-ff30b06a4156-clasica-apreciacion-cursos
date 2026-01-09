@@ -42,7 +42,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
             <img 
               src="/hero-clean.jpg" 
               alt="Piano con elementos musicales" 
-              className="w-full max-w-md h-auto object-contain rounded-lg shadow-lg"
+              className="w-full max-w-sm h-auto object-contain rounded-lg shadow-lg"
             />
           </div>
           
