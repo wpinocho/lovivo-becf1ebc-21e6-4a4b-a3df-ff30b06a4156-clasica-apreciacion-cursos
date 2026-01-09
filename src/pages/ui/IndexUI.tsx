@@ -35,11 +35,11 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
       showCart={true}
     >
       {/* Hero Section */}
-      <section className="w-full">
+      <section className="w-full max-w-[1920px] mx-auto">
         <img 
           src="/hero-integrated.jpg" 
           alt="Apreciación Musical - La música clásica guarda historias, ideas y emociones que vale la pena descubrir" 
-          className="w-full h-auto"
+          className="w-full h-auto object-contain"
         />
       </section>
 
